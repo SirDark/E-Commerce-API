@@ -1,10 +1,25 @@
 const {StatusCodes} = require('http-status-codes')
 const User = require('../models/user')
 const {attachCookiesToResponse} = require('../utils')
+const {BadRequestError, UnauthenticatedError} = require('../errors')
 
 const login = async (req,res) => {
-    res.send('login')
+    const {email, password} = req.body
+    if(!email || !password){
+        throw new BadRequestError('please provide email and password')
+    }
+    const user = await User.findOne({email})
+    if(!user){
+        throw new UnauthenticatedError('Invalid Credentials')
+    }
+    const isPasswordCorrect = await user.comparePassword(password)
+    if(!isPasswordCorrect) throw new UnauthenticatedError('Invalid password')
+    const tokenUser = {name: user.name, email: user.email, role: user.role}
+    attachCookiesToResponse({res, user: tokenUser})
+
+    res.status(StatusCodes.OK).json({msg:'ok'})
 }
+
 const register = async (req,res) => {
     console.log(req.body)
     const {email, name, password} = req.body
@@ -17,8 +32,13 @@ const register = async (req,res) => {
     attachCookiesToResponse({res, user: tokenUser})
     res.status(StatusCodes.CREATED).json({tokenUser})
 }
+
 const logout = async (req,res) => {
-    res.send('logout')
+    res.cookie('token', 'logout',{
+        httpOnly:true,
+        expires:new Date(Date.now() + 5*1000)
+    })
+    res.status(StatusCodes.OK).json({msg: 'user logged out'})
 }
 
 module.exports = {

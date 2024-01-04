@@ -1,3 +1,4 @@
+require('express-async-errors')
 //middleware imports
 const notFoundMiddleware = require('./middleware/not-found')
 const errorHandlerMiddleware = require('./middleware/error-handler')
@@ -6,11 +7,11 @@ const connectDB = require('./db/connect')
 //routers
 const authRouter = require('./routes/authRoutes')
 // rest of the package
-const express = require('express')
 require('dotenv').config()
-require('express-async-errors')
+const express = require('express')
 const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
+const { BadRequestError } = require('./errors')
 
 //express
 const app = express()
@@ -21,6 +22,9 @@ app.use(express.json())
 app.use(cookieParser(process.env.JWT_SECRET))
 
 //routes
+app.get('/', (req,res) => {
+    throw new BadRequestError('asdasd')
+})
 app.use('/api/v1/auth' , authRouter)
 
 //error handling
