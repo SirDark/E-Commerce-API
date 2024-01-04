@@ -36,7 +36,7 @@ const register = async (req,res) => {
 const logout = async (req,res) => {
     res.cookie('token', 'logout',{
         httpOnly:true,
-        expires:new Date(Date.now() + 5*1000)
+        expires:new Date(Date.now())
     })
     res.status(StatusCodes.OK).json({msg: 'user logged out'})
 }
