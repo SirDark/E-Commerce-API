@@ -11,19 +11,20 @@ require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
-const { BadRequestError } = require('./errors')
+const cors = require('cors')
 
 //express
 const app = express()
 
 //middlewares
+app.use(cors())
 app.use(morgan('tiny'))
 app.use(express.json())
 app.use(cookieParser(process.env.JWT_SECRET))
 
 //routes
 app.get('/', (req,res) => {
-    throw new BadRequestError('asdasd')
+    res.send('e-commerce')
 })
 app.use('/api/v1/auth' , authRouter)
 
