@@ -1,6 +1,7 @@
 const { StatusCodes } = require('http-status-codes')
 const User = require('../models/user')
 const { NotFoundError,BadRequestError,UnauthenticatedError } = require('../errors')
+const {attachCookiesToResponse, createTokenUser} = require('../utils')
 
 
 const getAllUsers = async (req, res) =>{
@@ -19,7 +20,15 @@ const showCurrentUser = async (req, res) =>{
 }
 
 const updateUser = async (req, res) =>{
-    res.send('updateUser')
+    const {name, email} = req.body
+    if(!name || !email)
+        throw new BadRequestError('name and email must be provided')
+    const user = await User.findOneAndUpdate({_id:req.user.userId}, {name,email}, {new:true, runValidators:true})
+    if(!user) throw new UnauthenticatedError('Invalid Credentials')
+    const tokenUser = createTokenUser(user)
+    attachCookiesToResponse({res, user: tokenUser})
+
+    res.json({msg:"updated"})
 }
 
 const updateUserPassword = async (req, res) =>{
