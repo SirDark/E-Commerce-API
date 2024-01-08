@@ -14,7 +14,7 @@ const login = async (req,res) => {
     }
     const isPasswordCorrect = await user.comparePassword(password)
     if(!isPasswordCorrect) throw new UnauthenticatedError('Invalid password')
-    const tokenUser = createTokenUser(user)//{name: user.name, email: user.email, userId: user._id, role: user.role}
+    const tokenUser = createTokenUser(user)
     attachCookiesToResponse({res, user: tokenUser})
 
     res.status(StatusCodes.OK).json({msg:'ok'})
@@ -28,7 +28,7 @@ const register = async (req,res) => {
     const role = isFirstAccount ? 'admin' : 'user'
 
     const newUser = await User.create({email, name, password, role})
-    const tokenUser = createTokenUser(user)//{name: newUser.name, email: newUser.email, userId: newUser._id,  role: newUser.role}
+    const tokenUser = createTokenUser(user)
     attachCookiesToResponse({res, user: tokenUser})
     res.status(StatusCodes.CREATED).json({tokenUser})
 }
