@@ -1,17 +1,68 @@
+const Review = require('../models/review')
+const Product = require('../models/product')
+const { StatusCodes } = require('http-status-codes')
+const CustomError = require('../errors')
+const {checkPermissions} = require('../utils')
+const product = require('../models/product')
+
 const createReview = async(req, res) => {
-    res.send('createReview')
+    const {product: productId} = req.body
+
+    const isValidProduct = await product.findOne({_id:productId})
+    if(!isValidProduct) 
+        throw new CustomError.NotFoundError(`No Product with id: ${productId}`)
+
+    const alreadySubmitted = await Review.findOne({
+        product:productId,
+        user:req.user.userId
+    })
+
+    if(alreadySubmitted)
+        throw new CustomError.BadRequestError(`Already submitted review for product: ${productId}`)
+
+    req.body.user= req.user.userId
+    const review = await Review.create(req.body)
+    res.status(StatusCodes.CREATED).json({review})
 }
 const getAllReviews = async(req, res) => {
-    res.send('getAllReviews')
+    const reviews = await Review.find({})
+    res.json({reviews})
 }
 const getSingleReview = async(req, res) => {
-    res.send('getSingleReview')
+    const review = await Review.findOne({_id: req.params.id})
+    if(!review)
+        throw new CustomError.NotFoundError(`No Review found with id: ${req.params.id}`)
+
+    res.json({review})
 }
 const updateReview = async(req, res) => {
-    res.send('updateReview')
+    const {title, comment, rating} = req.body
+    if(!title || !comment || !rating)
+        throw new CustomError.BadRequestError('please give comment, rating and title')
+    const review = await Review.findOne({_id: req.params.id})
+    if(!review)
+        throw new CustomError.NotFoundError(`No Review found with id: ${req.params.id}`)
+
+    checkPermissions(req.user, review.user)
+    
+    review.title = req.body.title
+    review.comment = comment
+    review.rating = rating
+    await review.save()
+    res.json({review})
+    
 }
 const deleteReview = async(req, res) => {
-    res.send('deleteReview')
+    const review = await Review.findOne({_id: req.params.id})
+    if(!review)
+        throw new CustomError.NotFoundError(`No Review found with id: ${req.params.id}`)
+    
+    checkPermissions(req.user, review.user)
+    
+    await review.remove()
+
+    res.json({msg:'done'})
+    
 }
 
 module.exports = {

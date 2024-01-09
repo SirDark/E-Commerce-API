@@ -32,4 +32,4 @@ const reviewSchema = new mongoose.Schema({
 reviewSchema.index({product:1, user:1}, {unique:true})
 
 
-models.exports = mongoose.model('Review', reviewSchema)
+module.exports = mongoose.model('Review', reviewSchema)
