@@ -3,7 +3,7 @@ const {createProduct,
     getSingleProduct,
     updateProduct,
     deleteProduct,
-    uploadProduct} = require('../controllers/productController')
+    uploadImage} = require('../controllers/productController')
 const {authenticateUser,
     authorizePermissions} = require('../middleware/authentication')
 const express = require('express')
@@ -13,7 +13,7 @@ router.route('/')
     .get(getAllProducts)
     .post(authenticateUser, authorizePermissions('admin') ,createProduct)
     
-router.route('/uploadImage').post(authenticateUser, authorizePermissions('admin'),uploadProduct)
+router.route('/uploadImage').post(authenticateUser, authorizePermissions('admin'),uploadImage)
 
 router.route('/:id')
     .get(getSingleProduct)

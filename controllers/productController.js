@@ -1,19 +1,34 @@
+const Product = require('../models/product')
+const {StatusCodes} = require('http-status-codes')
+const CustomError = require('../errors')
+
 const createProduct = async (req,res) => {
-    res.send('createProduct')
+    req.body.user = req.user.userId
+    const newprod = await Product.create(req.body)
+    res.status(StatusCodes.CREATED).json({newprod})
 }
 const getAllProducts = async (req,res) => {
-    res.send('getAllProducts')
+    const products = await Product.find({})
+    res.json({products})
 }
 const getSingleProduct = async (req,res) => {
-    res.send('getSingleProduct')
+    const product = await Product.findById(req.params.id)
+    if(!product)
+        CustomError.NotFoundError(`Product with ${req.params.id} not found`)
+    res.json({product})
 }
 const updateProduct = async (req,res) => {
-    res.send('updateProduct')
+    const product = await Product.findOneAndUpdate({_id: req.params.id}, req.body, {new: true, runValidators: true})
+
+    if(!product) throw new CustomError.NotFoundError(`Product with ${req.params.id} not found`)
+
+    res.json({product})
 }
 const deleteProduct = async (req,res) => {
-    res.send('deleteProduct')
+    await Product.deleteOne({_id: req.params.id})
+    res.json({msg:"done"})
 }
-const uploadProduct = async (req,res) => {
+const uploadImage = async (req,res) => {
     res.send('uploadProduct')
 }
 
@@ -23,5 +38,5 @@ module.exports = {
     getSingleProduct,
     updateProduct,
     deleteProduct,
-    uploadProduct
+    uploadImage
 }

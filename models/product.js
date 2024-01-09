@@ -30,12 +30,13 @@ const productSchema = new mongoose.Schema({
         type:String,
         required:[true, 'please provide company'],
         enum: {
-            values: ['ikea', 'liddy', 'marchos'],
-            message: '{VALUE} is not supported'
+            values: ['ikea', 'liddy', 'marcos'],
+            message: 'company {VALUE} is not supported'
         }
     },
     colors:{
-        type:String,
+        type:[String],
+        default:['#222'],
         required: true
     },
     featured:{
