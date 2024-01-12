@@ -47,6 +47,10 @@ const productSchema = new mongoose.Schema({
         type:Boolean,
         default:false
     },
+    numOfReviews:{
+        type:Number,
+        default:0
+    },
     inventory:{
         type:Number,
         required:true,

@@ -26,8 +26,6 @@ const createReview = async(req, res) => {
 }
 const getAllReviews = async(req, res) => {
     const reviews = await Review.find({})
-        .populate({path:'product', select: 'name company price'})
-        .populate({path:'user', select: 'name'})
     res.json({reviews})
 }
 const getSingleReview = async(req, res) => {
