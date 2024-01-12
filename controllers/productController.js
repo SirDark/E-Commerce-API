@@ -15,7 +15,7 @@ const getAllProducts = async (req,res) => {
 const getSingleProduct = async (req,res) => {
     const product = await Product.findById(req.params.id).populate('reviews')
     if(!product)
-        CustomError.NotFoundError(`Product with ${req.params.id} not found`)
+        throw new CustomError.NotFoundError(`Product with ${req.params.id} not found`)
     res.json({product})
 }
 const updateProduct = async (req,res) => {
@@ -26,7 +26,13 @@ const updateProduct = async (req,res) => {
     res.json({product})
 }
 const deleteProduct = async (req,res) => {
-    await Product.deleteOne({_id: req.params.id})
+    const paramid = req.params.id
+    const product = await Product.findOne({_id: paramid})
+
+    if(!product)
+        throw new CustomError.NotFoundError(`product with id: ${paramid} not found`)
+
+    await product.deleteOne()
     res.json({msg:"done"})
 }
 const uploadImage = async (req,res) => {
@@ -45,6 +51,7 @@ const uploadImage = async (req,res) => {
     await image.mv(imagePath)
     res.json({image: `/uploads/${image.name}`})
 }
+
 
 module.exports = {
     createProduct,
