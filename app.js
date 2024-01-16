@@ -31,9 +31,6 @@ app.use(fileUpload())
 
 //routes
 app.use(express.static('./public'));
-/*app.get('/', (req,res) => {
-    res.send('e-commerce')
-})*/
 app.use('/api/v1/auth' , authRouter)
 app.use('/api/v1/users', userRouter)
 app.use('/api/v1/products', productRouter)
