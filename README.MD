@@ -1,5 +1,4 @@
 you can also view this on https://e-commerce-7kff.onrender.com/
-
 # My Collection
 
 
@@ -60,7 +59,7 @@ you can also view this on https://e-commerce-7kff.onrender.com/
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/orders
+URL: https://e-commerce-7kff.onrender.com/api/v1/orders
 ```
 
 
@@ -81,7 +80,7 @@ URL: localhost:5000/api/v1/orders
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/orders/65a6a3f3d73585fbc6aaeb70
+URL: https://e-commerce-7kff.onrender.com/api/v1/orders/65a6a3f3d73585fbc6aaeb70
 ```
 
 
@@ -102,7 +101,7 @@ URL: localhost:5000/api/v1/orders/65a6a3f3d73585fbc6aaeb70
 ```bash
 Method: PATCH
 Type: RAW
-URL: localhost:5000/api/v1/orders/65a69930974772c1b3e85558
+URL: https://e-commerce-7kff.onrender.com/api/v1/orders/65a69930974772c1b3e85558
 ```
 
 
@@ -134,7 +133,7 @@ URL: localhost:5000/api/v1/orders/65a69930974772c1b3e85558
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/orders/showAllMyOrders
+URL: https://e-commerce-7kff.onrender.com/api/v1/orders/showAllMyOrders
 ```
 
 
@@ -155,7 +154,7 @@ URL: localhost:5000/api/v1/orders/showAllMyOrders
 ```bash
 Method: POST
 Type: RAW
-URL: localhost:5000/api/v1/orders
+URL: https://e-commerce-7kff.onrender.com/api/v1/orders
 ```
 
 
@@ -208,7 +207,7 @@ URL: localhost:5000/api/v1/orders
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/reviews
+URL: https://e-commerce-7kff.onrender.com/api/v1/reviews
 ```
 
 
@@ -229,7 +228,7 @@ URL: localhost:5000/api/v1/reviews
 ```bash
 Method: POST
 Type: RAW
-URL: localhost:5000/api/v1/reviews
+URL: https://e-commerce-7kff.onrender.com/api/v1/reviews
 ```
 
 
@@ -264,7 +263,7 @@ URL: localhost:5000/api/v1/reviews
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/reviews/659d6902cdd31e2791a57231
+URL: https://e-commerce-7kff.onrender.com/api/v1/reviews/659d6902cdd31e2791a57231
 ```
 
 
@@ -285,7 +284,7 @@ URL: localhost:5000/api/v1/reviews/659d6902cdd31e2791a57231
 ```bash
 Method: PATCH
 Type: RAW
-URL: localhost:5000/api/v1/reviews/659d6902cdd31e2791a57231
+URL: https://e-commerce-7kff.onrender.com/api/v1/reviews/659d6902cdd31e2791a57231
 ```
 
 
@@ -319,7 +318,7 @@ URL: localhost:5000/api/v1/reviews/659d6902cdd31e2791a57231
 ```bash
 Method: DELETE
 Type: 
-URL: localhost:5000/api/v1/reviews/65a16f03783ee3f8f3ec703b
+URL: https://e-commerce-7kff.onrender.com/api/v1/reviews/65a16f03783ee3f8f3ec703b
 ```
 
 
@@ -344,7 +343,7 @@ URL: localhost:5000/api/v1/reviews/65a16f03783ee3f8f3ec703b
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/products/659d54a2854791c92f997e88/reviews
+URL: https://e-commerce-7kff.onrender.com/api/v1/products/659d54a2854791c92f997e88/reviews
 ```
 
 
@@ -365,7 +364,7 @@ URL: localhost:5000/api/v1/products/659d54a2854791c92f997e88/reviews
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/products
+URL: https://e-commerce-7kff.onrender.com/api/v1/products
 ```
 
 
@@ -386,7 +385,7 @@ URL: localhost:5000/api/v1/products
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/products/65a5efd2df757e9d5e1b735
+URL: https://e-commerce-7kff.onrender.com/api/v1/products/65a5efd2df757e9d5e1b735
 ```
 
 
@@ -407,7 +406,7 @@ URL: localhost:5000/api/v1/products/65a5efd2df757e9d5e1b735
 ```bash
 Method: PATCH
 Type: RAW
-URL: localhost:5000/api/v1/products/659d58adfd09f8773f3df27c
+URL: https://e-commerce-7kff.onrender.com/api/v1/products/659d58adfd09f8773f3df27c
 ```
 
 
@@ -443,7 +442,7 @@ URL: localhost:5000/api/v1/products/659d58adfd09f8773f3df27c
 ```bash
 Method: DELETE
 Type: 
-URL: localhost:5000/api/v1/products/65a15efd2df757e9d5e1b735
+URL: https://e-commerce-7kff.onrender.com/api/v1/products/65a15efd2df757e9d5e1b735
 ```
 
 
@@ -464,7 +463,7 @@ URL: localhost:5000/api/v1/products/65a15efd2df757e9d5e1b735
 ```bash
 Method: POST
 Type: RAW
-URL: localhost:5000/api/v1/products
+URL: https://e-commerce-7kff.onrender.com/api/v1/products
 ```
 
 
@@ -500,7 +499,7 @@ URL: localhost:5000/api/v1/products
 ```bash
 Method: POST
 Type: FORMDATA
-URL: localhost:5000/api/v1/products/uploadImage
+URL: https://e-commerce-7kff.onrender.com/api/v1/products/uploadImage
 ```
 
 
@@ -534,7 +533,7 @@ URL: localhost:5000/api/v1/products/uploadImage
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/users
+URL: https://e-commerce-7kff.onrender.com/api/v1/users
 ```
 
 
@@ -556,7 +555,7 @@ URL: localhost:5000/api/v1/users
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/users/showMe
+URL: https://e-commerce-7kff.onrender.com/api/v1/users/showMe
 ```
 
 
@@ -578,7 +577,7 @@ URL: localhost:5000/api/v1/users/showMe
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/users/6595d7146a2894ecf63ca6f4
+URL: https://e-commerce-7kff.onrender.com/api/v1/users/6595d7146a2894ecf63ca6f4
 ```
 
 
@@ -600,7 +599,7 @@ URL: localhost:5000/api/v1/users/6595d7146a2894ecf63ca6f4
 ```bash
 Method: PATCH
 Type: RAW
-URL: localhost:5000/api/v1/users/updateUser
+URL: https://e-commerce-7kff.onrender.com/api/v1/users/updateUser
 ```
 
 
@@ -633,7 +632,7 @@ URL: localhost:5000/api/v1/users/updateUser
 ```bash
 Method: PATCH
 Type: RAW
-URL: localhost:5000/api/v1/users/updatePassword
+URL: https://e-commerce-7kff.onrender.com/api/v1/users/updatePassword
 ```
 
 
@@ -670,7 +669,7 @@ URL: localhost:5000/api/v1/users/updatePassword
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000/api/v1/auth/logout
+URL: https://e-commerce-7kff.onrender.com/api/v1/auth/logout
 ```
 
 
@@ -691,7 +690,7 @@ URL: localhost:5000/api/v1/auth/logout
 ```bash
 Method: POST
 Type: RAW
-URL: localhost:5000/api/v1/auth/register
+URL: https://e-commerce-7kff.onrender.com/api/v1/auth/register
 ```
 
 
@@ -725,7 +724,7 @@ URL: localhost:5000/api/v1/auth/register
 ```bash
 Method: POST
 Type: RAW
-URL: localhost:5000/api/v1/auth/login
+URL: https://e-commerce-7kff.onrender.com/api/v1/auth/login
 ```
 
 
@@ -762,7 +761,7 @@ URL: localhost:5000/api/v1/auth/login
 ```bash
 Method: GET
 Type: 
-URL: localhost:5000//
+URL: https://e-commerce-7kff.onrender.com/
 ```
 
 
@@ -777,4 +776,4 @@ URL: localhost:5000//
 ---
 [Back to top](#my-collection)
 
->Generated at 2024-01-16 17:26:04 by [docgen](https://github.com/thedevsaddam/docgen)
+>Generated at 2024-01-16 17:42:52 by [docgen](https://github.com/thedevsaddam/docgen)

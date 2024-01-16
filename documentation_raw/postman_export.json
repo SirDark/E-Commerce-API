@@ -34,7 +34,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/orders",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/orders",
 							"host": [
 								"localhost"
 							],
@@ -73,7 +73,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/orders/65a6a3f3d73585fbc6aaeb70",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/orders/65a6a3f3d73585fbc6aaeb70",
 							"host": [
 								"localhost"
 							],
@@ -126,7 +126,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/api/v1/orders/65a69930974772c1b3e85558",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/orders/65a69930974772c1b3e85558",
 							"host": [
 								"localhost"
 							],
@@ -166,7 +166,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/orders/showAllMyOrders",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/orders/showAllMyOrders",
 							"host": [
 								"localhost"
 							],
@@ -219,7 +219,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/api/v1/orders",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/orders",
 							"host": [
 								"localhost"
 							],
@@ -263,7 +263,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/reviews",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/reviews",
 							"host": [
 								"localhost"
 							],
@@ -315,7 +315,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/api/v1/reviews",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/reviews",
 							"host": [
 								"localhost"
 							],
@@ -354,7 +354,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/reviews/659d6902cdd31e2791a57231",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/reviews/659d6902cdd31e2791a57231",
 							"host": [
 								"localhost"
 							],
@@ -407,7 +407,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/api/v1/reviews/659d6902cdd31e2791a57231",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/reviews/659d6902cdd31e2791a57231",
 							"host": [
 								"localhost"
 							],
@@ -447,7 +447,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/reviews/65a16f03783ee3f8f3ec703b",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/reviews/65a16f03783ee3f8f3ec703b",
 							"host": [
 								"localhost"
 							],
@@ -492,7 +492,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/products/659d54a2854791c92f997e88/reviews",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/products/659d54a2854791c92f997e88/reviews",
 							"host": [
 								"localhost"
 							],
@@ -533,7 +533,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/products",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/products",
 							"host": [
 								"localhost"
 							],
@@ -572,7 +572,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/products/65a5efd2df757e9d5e1b735",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/products/65a5efd2df757e9d5e1b735",
 							"host": [
 								"localhost"
 							],
@@ -625,7 +625,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/api/v1/products/659d58adfd09f8773f3df27c",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/products/659d58adfd09f8773f3df27c",
 							"host": [
 								"localhost"
 							],
@@ -665,7 +665,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/products/65a15efd2df757e9d5e1b735",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/products/65a15efd2df757e9d5e1b735",
 							"host": [
 								"localhost"
 							],
@@ -718,7 +718,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/api/v1/products",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/products",
 							"host": [
 								"localhost"
 							],
@@ -771,7 +771,7 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:5000/api/v1/products/uploadImage",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/products/uploadImage",
 							"host": [
 								"localhost"
 							],
@@ -820,7 +820,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/users",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/users",
 							"host": [
 								"localhost"
 							],
@@ -863,7 +863,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/users/showMe",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/users/showMe",
 							"host": [
 								"localhost"
 							],
@@ -907,7 +907,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/users/6595d7146a2894ecf63ca6f4",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/users/6595d7146a2894ecf63ca6f4",
 							"host": [
 								"localhost"
 							],
@@ -960,7 +960,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/api/v1/users/updateUser",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/users/updateUser",
 							"host": [
 								"localhost"
 							],
@@ -1013,7 +1013,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/api/v1/users/updatePassword",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/users/updatePassword",
 							"host": [
 								"localhost"
 							],
@@ -1058,7 +1058,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/api/v1/auth/logout",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/auth/logout",
 							"host": [
 								"localhost"
 							],
@@ -1111,7 +1111,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/api/v1/auth/register",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/auth/register",
 							"host": [
 								"localhost"
 							],
@@ -1164,7 +1164,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/api/v1/auth/login",
+							"raw": "https://e-commerce-7kff.onrender.com/api/v1/auth/login",
 							"host": [
 								"localhost"
 							],
@@ -1206,7 +1206,7 @@
 					}
 				],
 				"url": {
-					"raw": "localhost:5000//",
+					"raw": "https://e-commerce-7kff.onrender.com/",
 					"host": [
 						"localhost"
 					],
