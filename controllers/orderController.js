@@ -13,13 +13,21 @@ const fakeStripeAPI = async ({amount, currency}) => {
 }
 
 const getAllOrders = async (req, res) => {
- res.send('getAllOrders')   
+    const orders = await Order.find({})
+    res.json({orders})
 }
 const getSingleOrder = async (req, res) => {
-    res.send('getSingleOrder')   
+    const order = await Order.findById(req.params.id)
+    if(!order)
+        throw new CustomError.NotFoundError(`order with id ${req.params.id} not found`)
+    checkPermissions(req.user, order.user)
+    res.json({order})
 }
 const getCurrentUserOrders = async (req, res) => {
-    res.send('getCurrentUserOrders')   
+    const order = await Order.find({user:req.user.userId})
+    if(!order)
+        throw new CustomError.NotFoundError(`No Orders found`)
+    res.json({order})
 }
 const createOrder = async (req, res) => {
     const {items: cartItems, tax, shippingFee} = req.body
@@ -69,7 +77,18 @@ const createOrder = async (req, res) => {
     res.status(StatusCodes.CREATED).json({order, clientSecret:order.clientSecret})
 }
 const updateOrder = async (req, res) => {
-    res.send('updateOrder')   
+    const {id: orderId} = req.params
+    const {paymentIntentId} = req.body
+    if(!paymentIntentId)
+        throw new CustomError.BadRequestError('payment id must be given')
+    const order = await Order.findOne({_id:orderId})
+    if(!order)
+        throw new CustomError.NotFoundError(`order with id ${orderId} not found`)
+    checkPermissions(req.user, order.user)
+    order.paymentIntentId = paymentIntentId
+    order.status = 'paid'
+    await order.save()
+    res.json({order})
 }
 
 module.exports = {
